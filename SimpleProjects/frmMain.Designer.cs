@@ -32,10 +32,10 @@
             this.btnXOgame = new System.Windows.Forms.Button();
             this.btnToDoList = new System.Windows.Forms.Button();
             this.btnSimpleFileExplorer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnPickColor = new System.Windows.Forms.Button();
             this.btnSimpleSiteVisit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPizza
@@ -82,26 +82,6 @@
             this.btnSimpleFileExplorer.UseVisualStyleBackColor = false;
             this.btnSimpleFileExplorer.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(617, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 56);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "NULL";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Location = new System.Drawing.Point(453, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 56);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "NULL";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // btnPickColor
             // 
             this.btnPickColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -123,6 +103,28 @@
             this.btnSimpleSiteVisit.Text = "Simple Site Visit";
             this.btnSimpleSiteVisit.UseVisualStyleBackColor = false;
             this.btnSimpleSiteVisit.Click += new System.EventHandler(this.btnSimpleSiteVisit_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(617, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 56);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "NULL";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Enabled = false;
+            this.button2.Location = new System.Drawing.Point(453, 262);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 56);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "NULL";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
@@ -150,10 +152,10 @@
         private System.Windows.Forms.Button btnXOgame;
         private System.Windows.Forms.Button btnToDoList;
         private System.Windows.Forms.Button btnSimpleFileExplorer;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnPickColor;
         private System.Windows.Forms.Button btnSimpleSiteVisit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
