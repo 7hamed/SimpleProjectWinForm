@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjects", "SimpleProjects\SimpleProjects.csproj", "{A466E3DD-C4F8-4DBF-AA70-12D0715173D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-EmployeeManagement", "..\course-14\05-Forms\7-EmployeeManagement\7-EmployeeManagement.csproj", "{7DF46784-17F0-4D4A-82FA-221958658E91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystem", "EmployeeManagementSystem\EmployeeManagementSystem.csproj", "{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A466E3DD-C4F8-4DBF-AA70-12D0715173D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A466E3DD-C4F8-4DBF-AA70-12D0715173D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A466E3DD-C4F8-4DBF-AA70-12D0715173D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7DF46784-17F0-4D4A-82FA-221958658E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7DF46784-17F0-4D4A-82FA-221958658E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7DF46784-17F0-4D4A-82FA-221958658E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7DF46784-17F0-4D4A-82FA-221958658E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
