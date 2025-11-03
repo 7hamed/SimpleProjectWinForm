@@ -29,42 +29,38 @@ namespace SimpleProjects
             InitializeComponent();
         }
 
+        private void justOneFormObject<T>(ref Form form) where T : Form, new()
+        {
+            if (form == null || form.IsDisposed)
+            {
+                form = new T();
+            }
+        }
+
         private void btnPizza_Click(object sender, EventArgs e)
         {
-            if (PizzaForm == null || PizzaForm.Disposing)
-            {
-                PizzaForm = new frmPizza();
-            }
+            justOneFormObject<frmPizza>(ref PizzaForm);
 
             PizzaForm.Show();
         }
 
         private void btnXOgame_Click(object sender, EventArgs e)
         {
-            if (XOgameForm == null || XOgameForm.Disposing)
-            {
-                XOgameForm = new frmXOgame();
-            }
+            justOneFormObject<frmXOgame>(ref XOgameForm);
 
             XOgameForm.Show();
         }
 
         private void btnToDoList_Click(object sender, EventArgs e)
         {
-            if (ToDoListForm == null || ToDoListForm.Disposing)
-            {
-                ToDoListForm = new frmToDoList();
-            }
+            justOneFormObject<frmToDoList>(ref ToDoListForm);
 
             ToDoListForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (SimpleFileExplorerForm == null || SimpleFileExplorerForm.Disposing)
-            {
-                SimpleFileExplorerForm = new frmSimpleFileExplorer();
-            }
+            justOneFormObject<frmSimpleFileExplorer>(ref SimpleFileExplorerForm);
 
             SimpleFileExplorerForm.Show();
 
@@ -72,20 +68,14 @@ namespace SimpleProjects
 
         private void btnSimpleSiteVisit_Click(object sender, EventArgs e)
         {
-            if (SimpleSiteVisitForm == null || SimpleSiteVisitForm.Disposing)
-            {
-                SimpleSiteVisitForm = new frmSimpleSiteVisit();
-            }
+            justOneFormObject<frmSimpleSiteVisit>(ref SimpleSiteVisitForm);
 
             SimpleSiteVisitForm.Show();
         }
 
         private void btnPickColor_Click(object sender, EventArgs e)
         {
-            if (PickColorForm == null || PickColorForm.Disposing)
-            {
-                PickColorForm = new frmPickColor();
-            }
+            justOneFormObject<frmPickColor>(ref PickColorForm);
 
             PickColorForm.Show();
         }

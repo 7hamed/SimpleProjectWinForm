@@ -83,6 +83,8 @@ namespace _6_ToDoList
             {
                 chkbTasks.SetItemChecked(i, true);
             }
+
+            UpdateTasksStatus();
         }
 
         private void btnUnCheckAll_Click(object sender, EventArgs e)
@@ -91,6 +93,8 @@ namespace _6_ToDoList
             {
                 chkbTasks.SetItemChecked(i, false);
             }
+
+            UpdateTasksStatus();
         }
 
         private void btnShow_Click(object sender, EventArgs e)
