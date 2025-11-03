@@ -11,8 +11,8 @@ namespace ToDoList.business_logic
     internal class clsUser
     {
 
-        private string UserName;
-        private string Password;
+        public string UserName { get; set; }
+        public string Password { get; set; }
 
         public clsUser(string username, string passowrd)
         {

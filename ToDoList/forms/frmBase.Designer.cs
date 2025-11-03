@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblSubTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -42,11 +43,24 @@
             this.lblTitle.Text = "Title";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblSubTitle
+            // 
+            this.lblSubTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSubTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.lblSubTitle.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblSubTitle.Location = new System.Drawing.Point(0, 48);
+            this.lblSubTitle.Name = "lblSubTitle";
+            this.lblSubTitle.Size = new System.Drawing.Size(882, 35);
+            this.lblSubTitle.TabIndex = 2;
+            this.lblSubTitle.Text = "Sub Title";
+            this.lblSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 603);
+            this.Controls.Add(this.lblSubTitle);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmBase";
             this.Text = "Form1";
@@ -57,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblSubTitle;
     }
 }
 

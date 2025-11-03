@@ -16,6 +16,7 @@ namespace ToDoList.forms
         public frmLogin()
         {
             this.TitleText = "Login Screen";
+            this.SubTitleText = "";
             InitializeComponent();
             this.ControlBox = false;
         }
@@ -25,7 +26,9 @@ namespace ToDoList.forms
         {
             if (clsUser.CheckUserPassword(txtUserName.Text, txtPassword.Text))
             {
-                MessageBox.Show("seccussfully");
+                Form MainScreen = new frmMain();
+                MainScreen.Show();
+                this.Close();
             }
             else
             {

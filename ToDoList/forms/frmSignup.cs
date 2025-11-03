@@ -16,6 +16,7 @@ namespace ToDoList.forms
         public frmSignup()
         {
             this.TitleText = "Sign In Screen";
+            this.SubTitleText = "";
             InitializeComponent();
             this.ControlBox = false;
         }

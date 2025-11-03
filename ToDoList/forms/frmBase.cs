@@ -19,9 +19,23 @@ namespace ToDoList.forms
             set { lblTitle.Text = value; }
         }
 
+        protected string SubTitleText
+        {
+            get { return lblSubTitle.Text; }
+            set { lblSubTitle.Text = value; }
+        }
+
         public frmBase()
         {
             InitializeComponent();
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            this.CenterToScreen();
+        }
+
     }
 }
