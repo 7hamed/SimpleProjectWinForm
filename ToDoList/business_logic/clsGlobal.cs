@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-namespace ToDoList
+namespace ToDoList.business_logic
 {
     
     internal static class clsGlobal

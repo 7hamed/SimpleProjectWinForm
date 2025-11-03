@@ -1,4 +1,4 @@
-﻿namespace ToDoList
+﻿namespace ToDoList.forms
 {
     partial class frmSignup
     {
