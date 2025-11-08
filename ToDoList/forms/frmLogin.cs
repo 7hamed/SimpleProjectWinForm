@@ -24,7 +24,8 @@ namespace ToDoList.forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (clsUser.CheckUserPassword(txtUserName.Text, txtPassword.Text))
+            
+            if (clsUser.loginUser(txtUserName.Text, txtPassword.Text))
             {
                 Form MainScreen = new frmMain();
                 MainScreen.Show();
@@ -32,7 +33,16 @@ namespace ToDoList.forms
             }
             else
             {
-                MessageBox.Show("fuck you");
+                var answer = MessageBox.Show("UserName or Password is wrong.\nDo you want to create new account", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
+                
+                if (answer == DialogResult.Yes)
+                {
+                    lblDontHaveAccount_Click(sender, e);
+                }
+                else
+                {
+                    txtUserName.Focus();
+                }
             }
         }
 
@@ -48,5 +58,6 @@ namespace ToDoList.forms
         {
             Application.Exit();
         }
+
     }
 }

@@ -27,14 +27,8 @@ namespace ToDoList.forms
 
         public frmBase()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-
-            this.CenterToScreen();
         }
 
     }

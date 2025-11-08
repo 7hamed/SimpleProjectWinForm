@@ -54,6 +54,7 @@
             this.txtPassword.Location = new System.Drawing.Point(259, 269);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(340, 45);
@@ -163,6 +164,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(882, 603);
             this.Controls.Add(this.btnExit);
@@ -174,7 +176,6 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtPassword);
             this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmLoginScreen";
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.txtUserName, 0);

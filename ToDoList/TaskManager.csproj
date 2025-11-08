@@ -57,6 +57,12 @@
   <ItemGroup>
     <Compile Include="business_logic\clsGlobal.cs" />
     <Compile Include="business_logic\clsUser.cs" />
+    <Compile Include="forms\frmAddTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmAddTask.Designer.cs">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,8 +93,17 @@
     <Compile Include="forms\frmBackground.Designer.cs">
       <DependentUpon>frmBackground.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmUpdateTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmUpdateTask.Designer.cs">
+      <DependentUpon>frmUpdateTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\frmAddTask.resx">
+      <DependentUpon>frmAddTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmBackground.resx">
       <DependentUpon>frmBackground.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +119,9 @@
     <EmbeddedResource Include="forms\frmSignup.resx">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmUpdateTask.resx">
+      <DependentUpon>frmUpdateTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="packages.config" />
@@ -127,6 +146,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Daily.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Education.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

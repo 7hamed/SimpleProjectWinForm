@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjects", "SimplePro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementSystem", "EmployeeManagementSystem\EmployeeManagementSystem.csproj", "{AE8FFAAD-2021-42DA-9E50-FF96101E4C5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{957CEE91-4AB9-49CD-AE82-EEE80C621311}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager", "ToDoList\TaskManager.csproj", "{957CEE91-4AB9-49CD-AE82-EEE80C621311}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

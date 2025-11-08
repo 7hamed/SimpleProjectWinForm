@@ -12,9 +12,6 @@ namespace ToDoList
     internal static class Program
     {
         
-        public enum eNextForm { Exit, Login, Signup, Main}
-        public static eNextForm NextForm = eNextForm.Login;
-
         [STAThread]
         static void Main()
         {
@@ -22,7 +19,13 @@ namespace ToDoList
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new frmBackground());
-
+            //Application.Run(new frmAddTask());
         }
     }
 }
+
+// make for each user a task file
+// make global task for every one
+// add for gatagory a photo DONE
+// add time for task 
+// add error provider

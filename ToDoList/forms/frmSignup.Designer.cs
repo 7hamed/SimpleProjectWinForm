@@ -181,7 +181,6 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.txtPassword);
             this.Name = "frmSignup";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmSignInScreen";
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.txtUserName, 0);

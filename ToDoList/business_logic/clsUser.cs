@@ -27,7 +27,7 @@ namespace ToDoList.business_logic
             return new clsUser(data[0], data[1]);
         }
 
-        public static clsUser isUserExist(string username)
+        public static clsUser getUserByUserName(string username)
         {
             using (StreamReader reader = new StreamReader(clsGlobal.UsersFilePath))
             {
@@ -46,32 +46,27 @@ namespace ToDoList.business_logic
             return null;
         }
 
-        public static bool CheckUserPassword(string username, string passowrd)
+        public static bool CheckUserPassword(clsUser user, string password)
         {
-            clsUser tempuser = isUserExist(username);
-            
-            if (tempuser == null)
+            return user.Password == password;
+        }
+
+        public static bool loginUser(string username, string password)
+        {
+            clsUser user = getUserByUserName(username);
+
+            if (user == null) 
                 return false;
 
-            if (tempuser.Password == passowrd)
+            if (CheckUserPassword(user, password))
             {
-                clsGlobal.LastCorrectUser = tempuser;
+                clsGlobal.CurrentUser = user;
                 return true;
             }
             else
                 return false;
         }
 
-        
-        public static clsUser getLastCorrectUser()
-        {
-            if (clsGlobal.LastCorrectUser != null)
-            {
-                return clsGlobal.LastCorrectUser;
-            }
-
-            return null;
-        }
 
         public static void AddUser(string username, string password)
         {
