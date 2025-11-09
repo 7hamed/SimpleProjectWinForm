@@ -33,10 +33,10 @@
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.treevTask = new System.Windows.Forms.TreeView();
             this.cmTreevTask = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmDeleteTask = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmUpdateTask = new System.Windows.Forms.ToolStripMenuItem();
             this.imageListCatagory = new System.Windows.Forms.ImageList(this.components);
             this.btnAddTask = new Guna.UI2.WinForms.Guna2Button();
+            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.cmTreevTask.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,39 +78,25 @@
             // 
             this.cmTreevTask.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cmTreevTask.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmDeleteTask,
-            this.tsmUpdateTask});
+            this.tsmDelete,
+            this.tsmUpdate});
             this.cmTreevTask.Name = "cmTreevTask";
-            this.cmTreevTask.Size = new System.Drawing.Size(159, 52);
-            // 
-            // tsmDeleteTask
-            // 
-            this.tsmDeleteTask.Name = "tsmDeleteTask";
-            this.tsmDeleteTask.Size = new System.Drawing.Size(158, 24);
-            this.tsmDeleteTask.Text = "Delete Task";
-            this.tsmDeleteTask.Click += new System.EventHandler(this.tsmDeleteTask_Click);
-            // 
-            // tsmUpdateTask
-            // 
-            this.tsmUpdateTask.Name = "tsmUpdateTask";
-            this.tsmUpdateTask.Size = new System.Drawing.Size(158, 24);
-            this.tsmUpdateTask.Text = "Update Task";
-            this.tsmUpdateTask.Click += new System.EventHandler(this.tsmUpdateTask_Click);
+            this.cmTreevTask.Size = new System.Drawing.Size(154, 68);
             // 
             // imageListCatagory
             // 
             this.imageListCatagory.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListCatagory.ImageStream")));
             this.imageListCatagory.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListCatagory.Images.SetKeyName(0, "pin.ico");
-            this.imageListCatagory.Images.SetKeyName(1, "personal.ico");
+            this.imageListCatagory.Images.SetKeyName(1, "brain.ico");
             this.imageListCatagory.Images.SetKeyName(2, "money.ico");
-            this.imageListCatagory.Images.SetKeyName(3, "health.ico");
+            this.imageListCatagory.Images.SetKeyName(3, "heart.ico");
             this.imageListCatagory.Images.SetKeyName(4, "work.ico");
-            this.imageListCatagory.Images.SetKeyName(5, "Daily.ico");
-            this.imageListCatagory.Images.SetKeyName(6, "Education.ico");
-            this.imageListCatagory.Images.SetKeyName(7, "taskEasy.ico");
-            this.imageListCatagory.Images.SetKeyName(8, "taskMedium.ico");
-            this.imageListCatagory.Images.SetKeyName(9, "taskHard.ico");
+            this.imageListCatagory.Images.SetKeyName(5, "daily.ico");
+            this.imageListCatagory.Images.SetKeyName(6, "education.ico");
+            this.imageListCatagory.Images.SetKeyName(7, "easy.ico");
+            this.imageListCatagory.Images.SetKeyName(8, "medium.ico");
+            this.imageListCatagory.Images.SetKeyName(9, "hard.ico");
             // 
             // btnAddTask
             // 
@@ -128,6 +114,24 @@
             this.btnAddTask.TabIndex = 1;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // tsmDelete
+            // 
+            this.tsmDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tsmDelete.Image = global::ToDoList.Properties.Resources.delete;
+            this.tsmDelete.Name = "tsmDelete";
+            this.tsmDelete.Size = new System.Drawing.Size(153, 32);
+            this.tsmDelete.Text = "Delete";
+            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // tsmUpdate
+            // 
+            this.tsmUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tsmUpdate.Image = global::ToDoList.Properties.Resources.update;
+            this.tsmUpdate.Name = "tsmUpdate";
+            this.tsmUpdate.Size = new System.Drawing.Size(153, 32);
+            this.tsmUpdate.Text = "Update";
+            this.tsmUpdate.Click += new System.EventHandler(this.tsmUpdate_Click);
             // 
             // frmMain
             // 
@@ -156,8 +160,8 @@
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private System.Windows.Forms.TreeView treevTask;
         private System.Windows.Forms.ContextMenuStrip cmTreevTask;
-        private System.Windows.Forms.ToolStripMenuItem tsmDeleteTask;
-        private System.Windows.Forms.ToolStripMenuItem tsmUpdateTask;
+        private System.Windows.Forms.ToolStripMenuItem tsmDelete;
+        private System.Windows.Forms.ToolStripMenuItem tsmUpdate;
         private Guna.UI2.WinForms.Guna2Button btnAddTask;
         private System.Windows.Forms.ImageList imageListCatagory;
     }

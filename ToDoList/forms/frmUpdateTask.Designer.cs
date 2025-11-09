@@ -51,7 +51,7 @@
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.Red;
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(82)))), ((int)(((byte)(11)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(555, 497);
@@ -152,12 +152,12 @@
             this.imageListCatagory.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListCatagory.ImageStream")));
             this.imageListCatagory.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListCatagory.Images.SetKeyName(0, "pin.ico");
-            this.imageListCatagory.Images.SetKeyName(1, "personal.ico");
+            this.imageListCatagory.Images.SetKeyName(1, "brain.ico");
             this.imageListCatagory.Images.SetKeyName(2, "money.ico");
-            this.imageListCatagory.Images.SetKeyName(3, "health.ico");
+            this.imageListCatagory.Images.SetKeyName(3, "heart.ico");
             this.imageListCatagory.Images.SetKeyName(4, "work.ico");
-            this.imageListCatagory.Images.SetKeyName(5, "Daily.ico");
-            this.imageListCatagory.Images.SetKeyName(6, "Education.ico");
+            this.imageListCatagory.Images.SetKeyName(5, "daily.ico");
+            this.imageListCatagory.Images.SetKeyName(6, "education.ico");
             this.imageListCatagory.Images.SetKeyName(7, "easy.ico");
             this.imageListCatagory.Images.SetKeyName(8, "medium.ico");
             this.imageListCatagory.Images.SetKeyName(9, "hard.ico");

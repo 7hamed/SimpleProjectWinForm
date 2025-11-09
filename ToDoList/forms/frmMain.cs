@@ -40,7 +40,7 @@ namespace ToDoList.forms
             return DeleteTask(treevTask.SelectedNode);
         }
 
-        private void tsmDeleteTask_Click(object sender, EventArgs e)
+        private void tsmDelete_Click(object sender, EventArgs e)
         {
             if (treevTask.SelectedNode == null)
             {
@@ -66,7 +66,7 @@ namespace ToDoList.forms
             DeleteSelectedTask();
         }
 
-        private void tsmUpdateTask_Click(object sender, EventArgs e)
+        private void tsmUpdate_Click(object sender, EventArgs e)
         {
             if (treevTask.SelectedNode == null)
             {
