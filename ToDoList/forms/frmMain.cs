@@ -124,11 +124,33 @@ namespace ToDoList.forms
             clsTask.SaveTasksToFile(treevTask, clsGlobal.CurrentUser.UserName);
         }
 
+        private void ExpandNodes(TreeNode root)
+        {
+            root.Expand();
+
+            if (root.Nodes.Count > 0)
+            {
+                foreach (TreeNode node in root.Nodes)
+                {
+                    ExpandNodes(node);
+                }
+            }
+        }
+
+        private void ExpandTreeView(TreeView treeview)
+        {
+            foreach (TreeNode node in treeview.Nodes)
+            {
+                ExpandNodes(node);
+            }
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             treevTask.Nodes.Clear();
             clsTask.LoadTasksFromFile(treevTask, imageListCatagory, clsGlobal.CurrentUser.UserName);
-        
+
+            ExpandTreeView(treevTask);
         }
     }
 }

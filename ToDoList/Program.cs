@@ -24,8 +24,5 @@ namespace ToDoList
     }
 }
 
-// make for each user a task file
 // make global task for every one
-// add for gatagory a photo DONE
-// add time for task 
-// add error provider
+// THERE IS ERROR WHEN ADDING NEW USER, THEN THE PROBLEM ARE GO OUT
