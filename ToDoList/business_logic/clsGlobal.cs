@@ -13,12 +13,14 @@ namespace ToDoList.business_logic
     {
         public static string UsersFilePath = "Users.txt";
         public static char Separator = '|';
+        public static string TaskFolderPath = "UserTasks";
 
         public static clsUser CurrentUser = null;
 
         public static void createfileUser()
         {
-            File.WriteAllText(UsersFilePath, "user1|1234");
+            string path = Path.Combine(TaskFolderPath, "q_tasks.txt");
+            File.WriteAllText(path, "hello world");
         }
     }
 }

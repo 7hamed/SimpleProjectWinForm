@@ -24,7 +24,13 @@ namespace ToDoList.forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
+            //if (string.IsNullOrWhiteSpace(txtUserName.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            //{
+            //    MessageBox.Show("UserName or Password is empty.\nPlease wirte them correctly");
+            //    return;
+            //}
+
             if (clsUser.loginUser(txtUserName.Text, txtPassword.Text))
             {
                 Form MainScreen = new frmMain();

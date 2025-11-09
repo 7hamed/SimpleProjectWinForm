@@ -16,14 +16,9 @@ namespace ToDoList.forms
         public frmMain()
         {
             this.TitleText = "Main Screen";
-            this.SubTitleText = "user name : " + _getUserNameOfCurrentUser();
+            this.SubTitleText = "user name : " + clsGlobal.CurrentUser.UserName;
             this.ControlBox = false;
             InitializeComponent();
-        }
-
-        private string _getUserNameOfCurrentUser()
-        {
-            return clsGlobal.CurrentUser.UserName;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -32,12 +27,6 @@ namespace ToDoList.forms
             LoginScreen.Show();
             this.Close();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-        
 
 
         private bool DeleteTask(TreeNode task)
@@ -127,6 +116,19 @@ namespace ToDoList.forms
         private void frmMain_Shown(object sender, EventArgs e)
         {
             treevTask.SelectedNode = null;
+            treevTask.Focus();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            clsTask.SaveTasksToFile(treevTask, clsGlobal.CurrentUser.UserName);
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            treevTask.Nodes.Clear();
+            clsTask.LoadTasksFromFile(treevTask, imageListCatagory, clsGlobal.CurrentUser.UserName);
+        
         }
     }
 }

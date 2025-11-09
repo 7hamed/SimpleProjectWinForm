@@ -60,6 +60,12 @@ namespace ToDoList.forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNewName.Text))
+            {
+                MessageBox.Show("New Name is Empty, please enter valide name");
+                return;
+            }
+            
             if (_isGatagory && _selectedTask.Text != txtNewName.Text)
             {
                 if (isGatagoryExist(txtNewName.Text))

@@ -93,7 +93,7 @@
             this.btnAddTask.Location = new System.Drawing.Point(672, 475);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(143, 45);
-            this.btnAddTask.TabIndex = 8;
+            this.btnAddTask.TabIndex = 5;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
@@ -112,7 +112,7 @@
             this.btnCancel.Location = new System.Drawing.Point(511, 475);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(143, 45);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -126,7 +126,7 @@
             this.cbCategoryTask.Location = new System.Drawing.Point(58, 163);
             this.cbCategoryTask.Name = "cbCategoryTask";
             this.cbCategoryTask.Size = new System.Drawing.Size(220, 37);
-            this.cbCategoryTask.TabIndex = 10;
+            this.cbCategoryTask.TabIndex = 0;
             this.cbCategoryTask.SelectedIndexChanged += new System.EventHandler(this.cbCategoryTask_SelectedIndexChanged);
             // 
             // label1
@@ -158,7 +158,7 @@
             this.txtCatagoryName.PlaceholderText = "";
             this.txtCatagoryName.SelectedText = "";
             this.txtCatagoryName.Size = new System.Drawing.Size(340, 45);
-            this.txtCatagoryName.TabIndex = 11;
+            this.txtCatagoryName.TabIndex = 2;
             // 
             // pbGatagoryImage
             // 
@@ -185,7 +185,7 @@
             this.cbCatagoryImage.Location = new System.Drawing.Point(125, 271);
             this.cbCatagoryImage.Name = "cbCatagoryImage";
             this.cbCatagoryImage.Size = new System.Drawing.Size(180, 37);
-            this.cbCatagoryImage.TabIndex = 14;
+            this.cbCatagoryImage.TabIndex = 1;
             this.cbCatagoryImage.SelectedIndexChanged += new System.EventHandler(this.cbCatagoryImage_SelectedIndexChanged);
             // 
             // label2
@@ -245,7 +245,7 @@
             this.cbTaskMode.Location = new System.Drawing.Point(578, 271);
             this.cbTaskMode.Name = "cbTaskMode";
             this.cbTaskMode.Size = new System.Drawing.Size(180, 37);
-            this.cbTaskMode.TabIndex = 18;
+            this.cbTaskMode.TabIndex = 4;
             this.cbTaskMode.SelectedIndexChanged += new System.EventHandler(this.cbTaskMode_SelectedIndexChanged);
             // 
             // pbTaskMode

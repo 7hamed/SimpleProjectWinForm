@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="business_logic\clsGlobal.cs" />
+    <Compile Include="business_logic\clsTask.cs" />
     <Compile Include="business_logic\clsUser.cs" />
     <Compile Include="forms\frmAddTask.cs">
       <SubType>Form</SubType>
@@ -146,30 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pin.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\personal.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\money.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\health.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\work.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Daily.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Education.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

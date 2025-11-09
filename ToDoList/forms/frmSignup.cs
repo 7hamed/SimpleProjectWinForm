@@ -23,6 +23,14 @@ namespace ToDoList.forms
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtUserName.Text) || string.IsNullOrWhiteSpace(txtPassword.Text)
+                || string.IsNullOrWhiteSpace(txtRepeatPassword.Text))
+            {
+                MessageBox.Show("UsernName or Password is empty.\nPlease write then correctly.");
+                txtUserName.Focus();
+                return;
+            }
+            
             if (clsUser.getUserByUserName(txtUserName.Text) != null)
             {
                 MessageBox.Show("user name is already exist");

@@ -152,6 +152,7 @@
             // 
             this.btnBackToLogin.Animated = true;
             this.btnBackToLogin.AutoRoundedCorners = true;
+            this.btnBackToLogin.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBackToLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBackToLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBackToLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -171,6 +172,7 @@
             this.AcceptButton = this.btnSignUp;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnBackToLogin;
             this.ClientSize = new System.Drawing.Size(891, 634);
             this.Controls.Add(this.btnBackToLogin);
             this.Controls.Add(this.label2);

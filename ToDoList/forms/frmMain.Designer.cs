@@ -35,8 +35,8 @@
             this.cmTreevTask = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmDeleteTask = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUpdateTask = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddTask = new Guna.UI2.WinForms.Guna2Button();
             this.imageListCatagory = new System.Windows.Forms.ImageList(this.components);
+            this.btnAddTask = new Guna.UI2.WinForms.Guna2Button();
             this.cmTreevTask.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.btnLogout.Location = new System.Drawing.Point(12, 680);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(143, 45);
-            this.btnLogout.TabIndex = 4;
+            this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Log out";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -71,7 +71,7 @@
             this.treevTask.Name = "treevTask";
             this.treevTask.SelectedImageIndex = 0;
             this.treevTask.Size = new System.Drawing.Size(626, 450);
-            this.treevTask.TabIndex = 6;
+            this.treevTask.TabIndex = 0;
             this.treevTask.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treevTask_AfterCheck);
             // 
             // cmTreevTask
@@ -97,23 +97,6 @@
             this.tsmUpdateTask.Text = "Update Task";
             this.tsmUpdateTask.Click += new System.EventHandler(this.tsmUpdateTask_Click);
             // 
-            // btnAddTask
-            // 
-            this.btnAddTask.Animated = true;
-            this.btnAddTask.AutoRoundedCorners = true;
-            this.btnAddTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddTask.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddTask.ForeColor = System.Drawing.Color.White;
-            this.btnAddTask.Location = new System.Drawing.Point(616, 586);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(162, 45);
-            this.btnAddTask.TabIndex = 9;
-            this.btnAddTask.Text = "Add Task";
-            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
-            // 
             // imageListCatagory
             // 
             this.imageListCatagory.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListCatagory.ImageStream")));
@@ -129,6 +112,23 @@
             this.imageListCatagory.Images.SetKeyName(8, "taskMedium.ico");
             this.imageListCatagory.Images.SetKeyName(9, "taskHard.ico");
             // 
+            // btnAddTask
+            // 
+            this.btnAddTask.Animated = true;
+            this.btnAddTask.AutoRoundedCorners = true;
+            this.btnAddTask.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTask.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddTask.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddTask.ForeColor = System.Drawing.Color.White;
+            this.btnAddTask.Location = new System.Drawing.Point(616, 586);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(162, 45);
+            this.btnAddTask.TabIndex = 1;
+            this.btnAddTask.Text = "Add Task";
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +140,7 @@
             this.Controls.Add(this.btnLogout);
             this.Name = "frmMain";
             this.Text = "frmMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.Controls.SetChildIndex(this.btnLogout, 0);

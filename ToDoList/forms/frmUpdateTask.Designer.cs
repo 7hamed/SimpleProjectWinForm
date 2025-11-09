@@ -57,7 +57,7 @@
             this.btnCancel.Location = new System.Drawing.Point(555, 497);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(143, 45);
-            this.btnCancel.TabIndex = 13;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -74,7 +74,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(716, 497);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(143, 45);
-            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -107,7 +107,7 @@
             this.txtNewName.PlaceholderText = "";
             this.txtNewName.SelectedText = "";
             this.txtNewName.Size = new System.Drawing.Size(340, 45);
-            this.txtNewName.TabIndex = 10;
+            this.txtNewName.TabIndex = 0;
             // 
             // lblImage
             // 
@@ -174,7 +174,7 @@
             this.cbTaskMode.Location = new System.Drawing.Point(338, 312);
             this.cbTaskMode.Name = "cbTaskMode";
             this.cbTaskMode.Size = new System.Drawing.Size(180, 37);
-            this.cbTaskMode.TabIndex = 17;
+            this.cbTaskMode.TabIndex = 1;
             this.cbTaskMode.SelectedIndexChanged += new System.EventHandler(this.cbTaskMode_SelectedIndexChanged);
             // 
             // frmUpdateTask
