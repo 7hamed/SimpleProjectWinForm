@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,5 +66,18 @@ namespace ToDoList.forms
             Application.Exit();
         }
 
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "username cant be empty"))
+                return;
+
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "password cant be empty"))
+                return;
+
+        }
     }
 }

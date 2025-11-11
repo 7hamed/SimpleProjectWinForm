@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDoList.business_logic;
 
 namespace ToDoList.forms
 {
@@ -60,13 +62,21 @@ namespace ToDoList.forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNewName.Text))
+            if (string.IsNullOrWhiteSpace(txtNewName.Text))
             {
                 MessageBox.Show("New Name is Empty, please enter valide name");
+                txtNewName.Focus();
+                return;
+            }
+
+            if (txtNewName.Text.Contains(clsGlobal.Separator))
+            {
+                MessageBox.Show($"New Name cant contains {clsGlobal.Separator} \nplease dont use it");
+                txtNewName.Focus();
                 return;
             }
             
-            if (_isGatagory && _selectedTask.Text != txtNewName.Text)
+            if (_isGatagory && _selectedTask.Text != txtNewName.Text) // if the new catagory name same to, exist catagory name
             {
                 if (isGatagoryExist(txtNewName.Text))
                 {
@@ -159,6 +169,15 @@ namespace ToDoList.forms
         private void cbTaskMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             pbImage.Image = imageListCatagory.Images[cbTaskMode.SelectedIndex + 7];
+        }
+
+        private void txtNewName_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "the Name cant be empty"))
+                return;
+
+            if (TextContainsCharErrorProvider((Guna2TextBox)sender, $"the Name cant contains {clsGlobal.Separator} ", clsGlobal.Separator))
+                return;
         }
     }
 }

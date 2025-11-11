@@ -59,6 +59,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(340, 45);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // btnLogin
             // 
@@ -129,6 +130,7 @@
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(340, 45);
             this.txtUserName.TabIndex = 0;
+            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
             // label3
             // 

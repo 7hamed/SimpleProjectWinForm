@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToDoList.business_logic;
 
 namespace ToDoList.forms
 {
@@ -68,9 +70,15 @@ namespace ToDoList.forms
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            if (txtCatagoryName.Text == "" || txtTaskName.Text == "")
+            if (string.IsNullOrWhiteSpace(txtCatagoryName.Text) || string.IsNullOrWhiteSpace(txtTaskName.Text))
             {
                 MessageBox.Show("catagory name  or  task name is empty");
+                return;
+            }
+
+            if (txtCatagoryName.Text.Contains(clsGlobal.Separator) || txtTaskName.Text.Contains(clsGlobal.Separator))
+            {
+                MessageBox.Show($"catagory name  or  task name contains {clsGlobal.Separator} \nplease dont use it.");
                 return;
             }
             
@@ -172,6 +180,24 @@ namespace ToDoList.forms
         private void cbTaskMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             pbTaskMode.Image = imageListCatagory.Images[cbTaskMode.SelectedIndex + 7];
+        }
+
+        private void txtCatagoryName_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "Catagory name cant be empty"))
+                return;
+
+            if (TextContainsCharErrorProvider((Guna2TextBox)sender, $"Catagory name cant contains {clsGlobal.Separator} ", clsGlobal.Separator))
+                return;
+        }
+
+        private void txtTaskName_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "Task name cant be empty"))
+                return;
+
+            if (TextContainsCharErrorProvider((Guna2TextBox)sender, $"Task name cant contains {clsGlobal.Separator} ", clsGlobal.Separator))
+                return;
         }
     }
 }

@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubTitle = new System.Windows.Forms.Label();
+            this.ErrpvMain = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrpvMain)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -55,6 +58,11 @@
             this.lblSubTitle.Text = "Sub Title";
             this.lblSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ErrpvMain
+            // 
+            this.ErrpvMain.BlinkRate = 100;
+            this.ErrpvMain.ContainerControl = this;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -64,6 +72,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "frmBase";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.ErrpvMain)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -72,6 +81,7 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSubTitle;
+        private System.Windows.Forms.ErrorProvider ErrpvMain;
     }
 }
 

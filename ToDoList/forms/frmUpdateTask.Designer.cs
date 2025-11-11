@@ -108,6 +108,7 @@
             this.txtNewName.SelectedText = "";
             this.txtNewName.Size = new System.Drawing.Size(340, 45);
             this.txtNewName.TabIndex = 0;
+            this.txtNewName.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewName_Validating);
             // 
             // lblImage
             // 

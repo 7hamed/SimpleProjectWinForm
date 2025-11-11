@@ -69,6 +69,7 @@
             this.txtTaskName.SelectedText = "";
             this.txtTaskName.Size = new System.Drawing.Size(340, 45);
             this.txtTaskName.TabIndex = 3;
+            this.txtTaskName.Validating += new System.ComponentModel.CancelEventHandler(this.txtTaskName_Validating);
             // 
             // label3
             // 
@@ -159,6 +160,7 @@
             this.txtCatagoryName.SelectedText = "";
             this.txtCatagoryName.Size = new System.Drawing.Size(340, 45);
             this.txtCatagoryName.TabIndex = 2;
+            this.txtCatagoryName.Validating += new System.ComponentModel.CancelEventHandler(this.txtCatagoryName_Validating);
             // 
             // pbGatagoryImage
             // 

@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,12 +23,23 @@ namespace ToDoList.forms
             this.ControlBox = false;
         }
 
+        private string GetTaskFilePath(string username)
+        {
+            return Path.Combine(clsGlobal.TaskFolderPath, $"{username}_tasks.txt");
+        }
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUserName.Text) || string.IsNullOrWhiteSpace(txtPassword.Text)
-                || string.IsNullOrWhiteSpace(txtRepeatPassword.Text))
+            if (string.IsNullOrWhiteSpace(txtUserName.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                MessageBox.Show("UsernName or Password is empty.\nPlease write then correctly.");
+                MessageBox.Show("UserName or Password is empty.\nPlease write them correctly.");
+                txtUserName.Focus();
+                return;
+            }
+
+            if (txtUserName.Text.Contains(clsGlobal.Separator) || txtPassword.Text.Contains(clsGlobal.Separator))
+            {
+                MessageBox.Show($"UserName or Password contains {clsGlobal.Separator} \nPlease Dont use it.");
                 txtUserName.Focus();
                 return;
             }
@@ -46,6 +59,7 @@ namespace ToDoList.forms
             }
 
             clsUser.AddUser(txtUserName.Text, txtPassword.Text);
+            File.Create(GetTaskFilePath(txtUserName.Text)).Close(); // create empty file for tasks
             MessageBox.Show("user added");
             return;
         }
@@ -55,6 +69,24 @@ namespace ToDoList.forms
             Form LoginScreen = new frmLogin();
             LoginScreen.Show();
             this.Close();
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "username cant be empty"))
+                return;
+
+            if (TextContainsCharErrorProvider((Guna2TextBox)sender, $"username cant contains {clsGlobal.Separator} ", clsGlobal.Separator))
+                return;
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (TextNullOrWhiteSpacesErrorProvider((Guna2TextBox)sender, "password cant be empty"))
+                return;
+
+            if (TextContainsCharErrorProvider((Guna2TextBox)sender, $"password cant contains {clsGlobal.Separator} ", clsGlobal.Separator))
+                return;
         }
     }
 }
